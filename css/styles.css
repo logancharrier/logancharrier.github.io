@@ -1,4 +1,11 @@
-#jumbotron {
-    width: 916px;
+body {
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-direction: column; /* Les Ã©lÃ©ments sont empilÃ©s */
+    width: 916px; /* La page occupe 916px */
+    margin: 0 auto; /* On centre la page */
 }
 
+img {
+    float: left;
+    margin-right:10px;
+}
