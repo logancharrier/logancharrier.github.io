@@ -275,38 +275,3 @@ body {
     background-position: 0 0px;
 }
 
-/******************************************
-* Passions
-******************************************/
-#passions .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#passions .container .libelle {
-    font-size: 1.3em;
-}
-#passions .container .classement {
-    background: scroll transparent url(images/emoji.png) no-repeat;
-    width: 160px;
-    height: 27px;
-}
-#passions .container .classement0 {
-    background-position: 0 -142px;
-}
-#passions .container .classement1 {
-    background-position: 0 -112px;
-}
-#passions .container .classement2 {
-    background-position: 0 -84px;
-}
-#passions .container .classement3 {
-    background-position: 0 -56px;
-}
-#passions .container .classement4 {
-    background-position: 0 -28px;
-}
-#passions .container .classement5 {
-    background-position: 0 0px;
-}
-
