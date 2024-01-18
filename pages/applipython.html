@@ -8,7 +8,8 @@
         <meta name="author" content="Logan CHARRIER">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+        <link href="../css/realisations.css" rel="stylesheet">
         <link rel="icon" href="favicon.ico">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
               rel="stylesheet">
@@ -26,12 +27,12 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active nav-item">
-                            <a href="index.html" class="nav-link">
+                            <a href="../index.html" class="nav-link">
                                 <span class="fa fa-home"></span> Accueil
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/cv.html" class="nav-link">
+                            <a href="cv.html" class="nav-link">
                                 <span class="fa fa-id-badge"></span> CV
                             </a>
                         </li>
@@ -44,16 +45,16 @@
                                 <li role="presentation" class="dropdown-header dropdown-item">
                                     En autonomie</li>
                                 <li role="presentation" class="dropdown-item">
-                                    <a role="menuitem" href="pages/applipython.html">Application Python</a>
+                                    <a role="menuitem" href="applipython.html">Application Python</a>
                                 </li>
                                 <li role="presentation" class="dropdown-item">
-                                    <a role="menuitem" href="pages/site.html">Site web</a>
+                                    <a role="menuitem" href="site.html">Site web</a>
                                 </li>
                                 <li role="presentation" class="dropdown-divider"></li>
                                 <li role="presentation" class="dropdown-header dropdown-item">
                                     En classe</li>
                                 <li role="presentation" class="dropdown-item">
-                                    <a role="menuitem" href="pages/projet1.html">Projet de 1ère année</a>
+                                    <a role="menuitem" href="projet1.html">Projet de 1ère année</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,67 +67,51 @@
                 </div>
             </div>
         </nav>
-        <div class="jumbotron">
-            <h1>Découvrez mon Portofolio !</h1>
-            <img src="images/photo_identite.png">
-            <p>
-                Je m'appelle Logan CHARRIER, j'ai 19 ans et ce site a pour but de me présenter en tant que personne, 
-                en tant qu'étudiant et candidature à l'obtention du BTS SIO (Services Informatiques aux Organisations) 
-                et en tant que futur professionnel de l'informatique.
-            </p>
-            <p><a class="btn btn-primary" href="pages/cv.html" target="_blank"
-                  role="button">En savoir plus »</a>
-            </p>
-        </div> <!-- Emplacement pour le contenu principal de la page -->
-        <footer>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Programmation sous Python</h1>
+                <p class="lead text-muted">Ayant effectué une Première puis Terminale spé NSI et ayant fait une L1 Informatique,
+                    j'ai pu expérimenté pas mal de travaux pratiques en Python qui est pour l'instant le langage que je connais le mieux.
+                    Les travaux pratiques qui m'ont particulièrement marqué sont ceux que j'ai décidé d'exposer ci-dessous.
+                </p>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <h2>Étudiant au Lycée Bonaparte</h2>
-                        <p>J'ai choisi de suivre le BTS SIO suite à une année de licence informatique
-                            à l'Univertsité de Toulon. Ce premier cursus ne m'a pas plu car il y avait
-                            peu de pratique et le niveau était élevé. De plus, les efforts nécessaires
-                            à la maison étaient trop important.
-                        </p>
-                        <p><a class="btn btn-secondary" href="http://www.cned.fr" target="_blank"
-                              role="button">En savoir plus »</a>
-                        </p>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="../images/jeu.png" alt="Jeu en Python type Space Invaders">
+                            <div class="card-body">
+                                <p class="card-text">Création d'un jeu Space Invaders en POO</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <h2>Le BTS SIO</h2>
-                        <p>Depuis mon adolescence, j'ai grâce aux jeux vidéos découvert le monde
-                            informatique et c'est quelque chose que j'ai beaucoup apprécié d'autant plus
-                            au moment de choisir mes spécialités au lycée. En effet, la NSI (Numérique et
-                            Sciences Informatiques) m'a fait apprécier le développement majoritairement
-                            en python et mon excellent professeur a su faire naitre une passion en moi.
-                        </p>
-                        <p><a class="btn btn-secondary" href="https://fr.wikipedia.org/wiki/Brevet_de_tec
-                              hnicien_supérieur_-_Services_informatiques_aux_organisations"
-                              target="_blank" role="button">En savoir plus »</a>
-                        </p>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="../images/pfc.png"
+                                 alt="Pierre feuille ciseaux">
+                            <div class="card-body">
+                                <p class="card-text">Pierre Feuille Ciseaux en python sur le thème Minecraft</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <h2>Option B SLAM</h2>
-                        <p>Après les vacances de Noël, nous devions choisir une option dans laquelle
-                            continuer le BTS, je n'ai évidemment pas douté et j'ai choisi d'aller en SLAM
-                            (Solutions Logicielles et Applications Métiers). Ayant déjà fait beaucoup de 
-                            développement en Python et un peu d'HTML CSS, j'ai préféré continuer dans le parcours
-                            qui me correspond le mieux.
-                        </p>
-                        <p><a class="btn btn-secondary" href="https://www.onisep.fr/Ressources/Univers-Fo
-                              rmation/Formations/Post-bac/bts-services-informatiques-aux-organisations-op
-                              tion-b-solutions-logicielles-et-applications-metiers" target="_blank"
-                              role="button">En savoir plus »</a>
-                        </p>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="../images/arduino.png" alt="Arduino">
+                            <div class="card-body">
+                                <p class="card-text">Réalisation d'un anémomètre avec carte Arduino (Python et un peu de C)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
                 <p class="text-center" id="copyright">© Logan CHARRIER 2024</p>
             </div>
         </footer>
-
-
-
 
         <!-- Optional JavaScript; choose one of the two! -->
 
