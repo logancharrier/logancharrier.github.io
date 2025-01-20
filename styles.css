@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0057ff, #2a7fff);
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 270px 20px;
+}
+
+.hero h1 {
+  font-size: 6em;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #0057ff;
+}
+
+.section {
+  padding: 250px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  background-color: #2a7fff;
+}
+
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project {
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
