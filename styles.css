@@ -6,17 +6,18 @@ body {
   text-align: center;
 }
 
+body.white-background {
+  background: #ffffff; /* Couleur blanche une fois en bas */
+}
+
 nav {
   display: flex; /* Alignement en ligne */
   align-items: center; /* Centrage vertical des éléments */
   max-width: 1440px;
   padding: 30px;
   font-family: "Courier New", Courier, monospace;
-  margin: 0 auto; /* Centrage du nav sur la page */
-}
-
-.logo {
   font-weight: bold;
+  margin: 0 auto; /* Centrage du nav sur la page */
 }
 
 nav ul {
@@ -37,12 +38,92 @@ nav ul li a:hover {
 }
 
 .hero {
-  padding: 200px 20px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 4%; /* Supprime le padding pour un centrage parfait */
 }
 
-.hero h1 {
-  font-size: 6em;
-  font-weight: bold;
+#carre {
+  position: relative; /* Permet de positionner les éléments enfants de manière absolue par rapport à ce carré */
+  width: 650px;
+  height: 350px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #2e8b57;
+}
+
+.presentation {
+  display: flex;
+  justify-content: flex-start; /* Aligne le texte à gauche */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text {
+  font-family: "Courier New", Courier, monospace;
+  flex: 1; /* Le texte prend tout l'espace disponible à gauche */
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  padding: 9vh 4vw 5vh 2vw;
+}
+
+.image-placeholder {
+  width: 120px;
+  height: 120px;
+  background-color: #ccc;
+  margin-top: 35px;
+  margin-right: 20px;
+  overflow: hidden; /* Empêche l'image de dépasser */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder img {
+  width: 100%; /* Ajuste l'image à la largeur du conteneur */
+  height: 100;
+}
+
+.logo-reseau {
+  position: absolute;
+  bottom: 20px; /* Positionne les logos à 20px du bas du carré */
+  right: 20px; /* Positionne les logos à 20px du côté droit du carré */
+}
+
+.logo-reseau ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.logo-reseau ul li a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.logo-reseau ul li a:hover {
+  color: #2e8b57; /* Changement de couleur au survol */
+}
+
+#carre::before {
+  content: "";
+  position: absolute;
+  top: 10px; /* Décalage vers le bas */
+  left: 10px; /* Décalage vers la droite */
+  width: 100%;
+  height: 100%;
+  background-color: #2e8b57; /* Ombre avec opacité */
+
+  z-index: -1; /* Place l'ombre derrière */
 }
 
 .btn {
@@ -61,20 +142,161 @@ nav ul li a:hover {
   color: black;
 }
 
-.section {
-  padding: 250px 20px;
-  background: rgba(255, 255, 255, 0.1);
+.transition-to-projects {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 6%;
 }
 
-.project-gallery {
+.transition-to-projects a {
+  margin-top: 8%;
+  text-decoration: none;
+  color: black; /* Couleur du texte (vert) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-to-projects a:hover {
+  text-decoration: underline;
+}
+
+.arrow-down {
+  font-size: 10px;
+}
+
+.transition-to-projects i {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+/* Section projets */
+.projects {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 8vw;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #808080;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.projects-title i {
+  margin-left: 8px;
+  color: #808080;
+}
+
+/* Conteneur des projets */
+.div-block {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.project {
-  width: 300px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+/* Style pour chaque projet */
+.project-item {
+  width: 35%;
+  background-color: #f6f0e6;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Images des projets */
+.project-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Catégorie du projet */
+.project-category {
+  font-size: 14px;
+  color: #808080;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Titre du projet */
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -5px;
+  color: #333;
+}
+
+.see-all-projects {
+  text-align: center;
+}
+
+.btn-see-all {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: #2e8b57;
+  border-radius: 8px;
+  margin-bottom: 2.5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-see-all:hover {
+  background: #246a46;
+}
+
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  position: static; /* Fixe le footer en bas */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Largeur complète */
+  background-color: black; /* Fond noir */
+  color: white; /* Texte blanc */
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-content {
+  max-width: 1440px; /* Largeur maximale */
+  margin: 0 auto; /* Centre le contenu */
+  display: flex;
+  justify-content: space-between; /* Aligne les éléments à gauche et à droite */
+  align-items: center; /* Centre verticalement */
+  padding: 0 20px; /* Espacement intérieur */
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right ul {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Espacement entre les liens */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #f6f0e6; /* Changement de couleur au survol */
 }

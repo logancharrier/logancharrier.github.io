@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Logan Charrier</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -16,48 +20,168 @@
           <li><a href="#cv">CV</a></li>
         </ul>
       </nav>
-
-      <div class="hero">
-        <h1>Qui suis-je ?</h1>
-        <p>Développeur Informatique Fullstack</p>
-        <a href="#about" class="btn">Découvrir</a>
-      </div>
     </header>
-
-    <!-- <section id="about" class="section">
-      <img src="profil.jpg" alt="Photo de profil" />
-      <h2>Logan Charrier</h2>
-      <p>
-        Étudiant en BTS SIO option SLAM, visant un Master MIAGE pour devenir
-        développeur.
-      </p>
-      <a href="CV.pdf" class="btn">Télécharger mon CV</a>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Mes projets</h2>
-      <p>
-        Découvrez les projets que j'ai réalisés lors de mon cursus de BTS SIO
-      </p>
-      <div class="project-gallery">
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
+    <div class="hero">
+      <div id="carre">
+        <div class="presentation">
+          <div class="text">
+            Salut ! Je suis Logan, un développeur informatique français.<br />
+            <br />
+            Je suis actuellement étudiant en BTS SIO option SLAM avec comme
+            ambition d'avoir un Master MIAGE.
+          </div>
+          <div class="image-placeholder">
+            <img src="assets/afa44f47d98fdce90f05971dd9014f30.jpg" alt="" />
+          </div>
+          <div class="logo-reseau">
+            <ul>
+              <li>
+                <a href="mailto:logancharrier@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/logan_charrier" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/logan-charrier" target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <a href="#" class="btn">Voir tous les projets</a>
-    </section>
+    </div>
 
-    <section id="contact" class="section">
-      <h2>Écrivez-moi</h2>
-      <p>
-        Contactez-moi par mail à
-        <a href="mailto:logancharrier@gmail.com">logancharrier@gmail.com</a>
-      </p>
-      <a href="mailto:logancharrier@gmail.com" class="btn">Envoyer un mail</a>
-    </section> -->
+    <div class="transition-to-projects">
+      <a href="#projects"
+        >PROJETS
+        <div class="arrow-down"><i class="fa-solid fa-arrow-down"></i></div
+      ></a>
+    </div>
+
+    <div class="projects">
+      <div class="div-block">
+        <div class="project-item">
+          <img src="assets/nolark.PNG" alt="Nolark project" />
+          <p class="project-category">
+            Projet réalisé lors de ma première année de BTS SIO
+          </p>
+          <h2 class="project-title">
+            Nolark - Site de vente de casques de moto
+          </h2>
+        </div>
+        <div class="project-item">
+          <img src="assets/portfolio.webp" alt="Portfolio project" />
+          <p class="project-category">Projet personnel en développement web</p>
+          <h2 class="project-title">Portfolio - Site personnel</h2>
+        </div>
+        <div class="project-item">
+          <img src="assets/gsb.PNG" alt="GSB project" />
+          <p class="project-category">
+            Projet réalisé lors de ma deuxième année de BTS SIO
+          </p>
+          <h2 class="project-title">GSB - Gestion de frais médicaux</h2>
+        </div>
+        <div class="project-item">
+          <img src="assets/comingsoon.jpeg" alt="Coming soon project" />
+          <p class="project-category">Projet en cours de réalisation...</p>
+          <h2 class="project-title">Prochainement...</h2>
+        </div>
+      </div>
+    </div>
+    <div class="see-all-projects">
+      <a href="tous-les-projets.html" class="btn-see-all"
+        >Voir tous les projets</a
+      >
+    </div>
 
     <footer>
-      <p>&copy; 2025 Logan Charrier. Tous droits réservés.</p>
+      <div class="footer-content">
+        <div class="footer-left">
+          &copy; 2025 Logan Charrier - Tous droits réservés.
+        </div>
+        <div class="footer-right">
+          <ul>
+            <li>
+              <a href="mailto:logancharrier@gmail.com"
+                >logancharrier@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="https://instagram.com/logan_charrier" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/logan-charrier" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.scrollY; // Position actuelle du scroll
+      const docHeight = document.documentElement.scrollHeight; // Hauteur totale de la page
+      const winHeight = window.innerHeight; // Hauteur visible de l'écran
+      const scrollPercent = scrollTop / (docHeight - winHeight); // Pourcentage du scroll
+
+      // Couleur initiale en RGB (246, 240, 230 -> #f6f0e6)
+      const startColor = { r: 246, g: 240, b: 230 };
+      // Couleur finale en RGB (255, 255, 255 -> blanc)
+      const endColor = { r: 255, g: 255, b: 255 };
+
+      // Interpolation des couleurs en fonction du scroll
+      const r = Math.floor(
+        startColor.r + (endColor.r - startColor.r) * scrollPercent
+      );
+      const g = Math.floor(
+        startColor.g + (endColor.g - startColor.g) * scrollPercent
+      );
+      const b = Math.floor(
+        startColor.b + (endColor.b - startColor.b) * scrollPercent
+      );
+
+      // Application de la nouvelle couleur en fond de page
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY; // Position actuelle du scroll
+        const docHeight = document.documentElement.scrollHeight; // Hauteur totale de la page
+        const winHeight = window.innerHeight; // Hauteur visible de l'écran
+        const scrollPercent = scrollTop / (docHeight - winHeight); // Pourcentage du scroll
+
+        // Couleur initiale en RGB (246, 240, 230 -> #f6f0e6)
+        const startColor = { r: 246, g: 240, b: 230 };
+        // Couleur finale en RGB (255, 255, 255 -> blanc)
+        const endColor = { r: 255, g: 255, b: 255 };
+
+        // Interpolation des couleurs en fonction du scroll
+        const r = Math.floor(
+          startColor.r + (endColor.r - startColor.r) * scrollPercent
+        );
+        const g = Math.floor(
+          startColor.g + (endColor.g - startColor.g) * scrollPercent
+        );
+        const b = Math.floor(
+          startColor.b + (endColor.b - startColor.b) * scrollPercent
+        );
+
+        // Application de la nouvelle couleur en fond de page
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        // Sélection de tous les éléments avec la classe "project-item"
+        document.querySelectorAll(".project-item").forEach((item) => {
+          item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+      });
+    });
+  </script>
 </html>
