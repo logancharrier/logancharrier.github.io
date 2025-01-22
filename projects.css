@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Adieu";
+  src: url("fonts/Adieu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,17 +13,14 @@ body {
   text-align: center;
 }
 
-body.white-background {
-  background: #ffffff; /* Couleur blanche une fois en bas */
-}
-
 nav {
   display: flex; /* Alignement en ligne */
   align-items: center; /* Centrage vertical des éléments */
   max-width: 1440px;
   padding: 30px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   margin: 0 auto; /* Centrage du nav sur la page */
 }
 
@@ -27,12 +31,12 @@ nav ul {
   margin-left: auto; /* Pousse la liste à droite */
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
   color: black;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: black;
 }
@@ -42,48 +46,213 @@ nav ul li a:hover {
   transition: 0.05s ease-in-out;
 }
 
-/* Style pour le conteneur du carré */
 .hero {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 4%; /* Supprime le padding pour un centrage parfait */
+}
+
+#carre {
+  position: relative; /* Permet de positionner les éléments enfants de manière absolue par rapport à ce carré */
+  width: 650px;
+  height: 350px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #2e8b57;
+}
+
+.presentation {
+  display: flex;
+  justify-content: flex-start; /* Aligne le texte à gauche */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text {
+  font-family: IBM Plex Mono, sans-serif;
+  flex: 1; /* Le texte prend tout l'espace disponible à gauche */
+  text-align: left;
+  font-size: 1.26em;
+  font-weight: 500;
+  line-height: 1.3em;
+  padding: 7vh 4vw 5vh 2vw;
+}
+
+.image-placeholder {
+  width: 200px;
+  height: 200px;
+  margin-top: 35px;
+  margin-right: 20px;
+  overflow: hidden; /* Empêche l'image de dépasser */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background-color: #f6f0e6; /* Fond similaire au reste du site */
 }
 
-/* Le carré contenant l'image */
-#carre {
-  width: 400px; /* Taille du carré */
-  height: 400px;
-  background-color: #ddd;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Cache tout dépassement de l'image */
-  position: relative;
-}
-
-/* Style de l'image pour qu'elle remplisse le carré */
 .image-placeholder img {
+  width: 100%; /* Ajuste l'image à la largeur du conteneur */
+}
+
+.logo-reseau {
+  position: absolute;
+  bottom: 20px; /* Positionne les logos à 20px du bas du carré */
+  right: 20px; /* Positionne les logos à 20px du côté droit du carré */
+}
+
+.logo-reseau ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.logo-reseau ul li a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.logo-reseau ul li a:hover {
+  color: #2e8b57; /* Changement de couleur au survol */
+}
+
+#carre::before {
+  content: "";
+  position: absolute;
+  top: 10px; /* Décalage vers le bas */
+  left: 10px; /* Décalage vers la droite */
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Remplit le carré sans déformer l'image */
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: #2e8b57; /* Ombre avec opacité */
+
+  z-index: -1; /* Place l'ombre derrière */
 }
 
-/* Ajustement responsive pour les petits écrans */
-@media (max-width: 768px) {
-  #carre {
-    width: 90%; /* Réduction de la taille pour les petits écrans */
-    height: auto;
-  }
+.transition-to-projects {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6%;
+}
+
+.transition-to-projects a {
+  margin-top: 8%;
+  text-decoration: none;
+  color: black; /* Couleur du texte (vert) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-to-projects a:hover {
+  text-decoration: underline;
+}
+
+.arrow-down {
+  font-size: 10px;
+}
+
+.transition-to-projects i {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+/* Section projets */
+.projects {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 8vw;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #808080;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.projects-title i {
+  margin-left: 8px;
+  color: #808080;
+}
+
+/* Conteneur des projets */
+.div-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style pour chaque projet */
+.project-item {
+  width: 35%;
+  background-color: #f6f0e6;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Images des projets */
+.project-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Catégorie du projet */
+.project-category {
+  font-family: "Space Mono", sans-serif;
+  font-size: 14px;
+  color: #9c9892;
+  text-transform: uppercase;
+
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Titre du projet */
+.project-title {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  margin-top: -5px;
+  color: #161417;
+}
+
+.see-all-projects {
+  text-align: center;
+}
+
+.btn-see-all {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: #2e8b57;
+  font-family: "Adieu", sans-serif;
+  margin-bottom: 2.5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-see-all:hover {
+  background: #246a46;
 }
 
 footer {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
-  position: fixed; /* Fixe le footer en bas */
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  position: static; /* Fixe le footer en bas */
   bottom: 0;
   left: 0;
   width: 100%; /* Largeur complète */

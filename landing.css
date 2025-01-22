@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Adieu";
+  src: url("fonts/Adieu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,17 +13,14 @@ body {
   text-align: center;
 }
 
-body.white-background {
-  background: #ffffff; /* Couleur blanche une fois en bas */
-}
-
 nav {
   display: flex; /* Alignement en ligne */
   align-items: center; /* Centrage vertical des éléments */
   max-width: 1440px;
   padding: 30px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   margin: 0 auto; /* Centrage du nav sur la page */
 }
 
@@ -68,18 +72,18 @@ nav ul li a:hover {
 }
 
 .text {
-  font-family: "Courier New", Courier, monospace;
+  font-family: IBM Plex Mono, sans-serif;
   flex: 1; /* Le texte prend tout l'espace disponible à gauche */
   text-align: left;
-  font-size: 1.2em;
-  line-height: 1.6em;
-  padding: 9vh 4vw 5vh 2vw;
+  font-size: 1.26em;
+  font-weight: 500;
+  line-height: 1.3em;
+  padding: 7vh 4vw 5vh 2vw;
 }
 
 .image-placeholder {
-  width: 120px;
-  height: 120px;
-  background-color: #ccc;
+  width: 200px;
+  height: 200px;
   margin-top: 35px;
   margin-right: 20px;
   overflow: hidden; /* Empêche l'image de dépasser */
@@ -90,7 +94,6 @@ nav ul li a:hover {
 
 .image-placeholder img {
   width: 100%; /* Ajuste l'image à la largeur du conteneur */
-  height: 100;
 }
 
 .logo-reseau {
@@ -131,28 +134,12 @@ nav ul li a:hover {
   z-index: -1; /* Place l'ombre derrière */
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  border: 2px solid black;
-  border-radius: 25px;
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #ffffff;
-  color: black;
-}
-
 .transition-to-projects {
   text-align: center;
   margin-top: 40px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   margin-bottom: 6%;
 }
 
@@ -224,18 +211,22 @@ nav ul li a:hover {
 
 /* Catégorie du projet */
 .project-category {
+  font-family: "Space Mono", sans-serif;
   font-size: 14px;
-  color: #808080;
+  color: #9c9892;
   text-transform: uppercase;
+
+  font-weight: 500;
   margin-top: 10px;
 }
 
 /* Titre du projet */
 .project-title {
   font-size: 18px;
-  font-weight: bold;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
   margin-top: -5px;
-  color: #333;
+  color: #161417;
 }
 
 .see-all-projects {
@@ -248,7 +239,7 @@ nav ul li a:hover {
   font-size: 18px;
   color: #fff;
   background: #2e8b57;
-  border-radius: 8px;
+  font-family: "Adieu", sans-serif;
   margin-bottom: 2.5%;
   transition: all 0.3s ease-in-out;
 }
@@ -258,8 +249,9 @@ nav ul li a:hover {
 }
 
 footer {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
   position: static; /* Fixe le footer en bas */
   bottom: 0;
   left: 0;
