@@ -27,6 +27,11 @@ nav ul {
   margin-left: auto; /* Pousse la liste à droite */
 }
 
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
 nav ul li a {
   text-decoration: none;
   color: black;

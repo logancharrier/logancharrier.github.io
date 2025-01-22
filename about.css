@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f0e6;
+  color: black;
+  text-align: center;
+}
+
+body.white-background {
+  background: #ffffff; /* Couleur blanche une fois en bas */
+}
+
+nav {
+  display: flex; /* Alignement en ligne */
+  align-items: center; /* Centrage vertical des éléments */
+  max-width: 1440px;
+  padding: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin: 0 auto; /* Centrage du nav sur la page */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Espacement entre les liens */
+  margin-left: auto; /* Pousse la liste à droite */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  font-style: italic;
+  transition: 0.05s ease-in-out;
+}
+
+.hero {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 4%;
+}
+
+#carre {
+  position: relative; /* Position de référence pour les éléments enfants */
+  width: 384px;
+  height: 384px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Suppression du padding pour que l'image occupe tout l'espace */
+  border: 1px solid #2e8b57;
+  overflow: hidden; /* Empêche l'image de dépasser */
+}
+
+.presentation {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Permet de positionner l'image à l'intérieur */
+}
+
+/* Image occupant tout l'espace du carré */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image s'adapte sans déformation */
+}
+
+#carre::before {
+  position: absolute;
+  top: 10px; /* Décalage vers le bas */
+  left: 10px; /* Décalage vers la droite */
+  width: 100%;
+  height: 100%;
+  background-color: #2e8b57;
+  z-index: -1; /* Place l'ombre derrière */
+}
+
+#carre,
+#carre::before {
+  box-sizing: border-box;
+}
+
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  position: fixed; /* Fixe le footer en bas */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Largeur complète */
+  background-color: black; /* Fond noir */
+  color: white; /* Texte blanc */
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-content {
+  max-width: 1440px; /* Largeur maximale */
+  margin: 0 auto; /* Centre le contenu */
+  display: flex;
+  justify-content: space-between; /* Aligne les éléments à gauche et à droite */
+  align-items: center; /* Centre verticalement */
+  padding: 0 20px; /* Espacement intérieur */
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right ul {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Espacement entre les liens */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #f6f0e6; /* Changement de couleur au survol */
+}
