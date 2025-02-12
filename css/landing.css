@@ -235,13 +235,15 @@ nav ul li a:hover {
 
 .btn-see-all {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 12px 30px;
+  font-size: 17px;
   color: #fff;
   background: #2e8b57;
-  font-family: "Adieu", sans-serif;
-  margin-bottom: 2.5%;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-bottom: 1%;
   transition: all 0.3s ease-in-out;
+  text-decoration: none; /* Désactive le soulignement */
+  margin-bottom: 2.5%;
 }
 
 .btn-see-all:hover {

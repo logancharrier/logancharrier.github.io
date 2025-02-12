@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Adieu";
+  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,12 +31,12 @@ nav ul {
   margin-left: auto; /* Pousse la liste à droite */
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
   color: black;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
   color: black;
 }
@@ -39,50 +46,95 @@ nav ul li a:hover {
   transition: 0.05s ease-in-out;
 }
 
-.hero {
-  display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center;
-  padding: 4%;
-}
+.container {
+  width: 80%;
 
-#carre {
-  margin-top: -40px;
-  position: flex;
-  width: 384px;
-  height: 384px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border: 1px solid #de4c36;
-  overflow: hidden;
-  box-shadow: 8px 8px 0px #de4c36; /* Ombre décalée en bas à droite */
-}
-
-.presentation {
-  width: 100%;
-  height: 100%;
-  position: relative; /* Permet de positionner l'image à l'intérieur */
-}
-
-/* Image occupant tout l'espace du carré */
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-}
-
-.image-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* L'image s'adapte sans déformation */
-}
-
-.text {
-  margin-left: 5%;
+  margin: 5px auto;
   text-align: left;
-  max-width: 28%;
+  font-family: "Adieu", sans-serif;
+  font-size: 28px;
+}
+
+/* 🔹 Section de Présentation */
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+#firstfeature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.feature:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.feature img {
+  width: 12%;
+  margin: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#ggalerts {
+  width: 24%;
+  margin: 14%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#xlogo {
+  width: 10%;
+  margin: 14%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feature-text {
+  width: 50%;
+  text-align: left;
+}
+
+.feature-text h2 {
+  font-size: 24px;
+  font-family: "Adieu", sans-serif;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-text p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 900px) {
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .feature img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .feature-text {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 @font-face {
@@ -94,7 +146,7 @@ nav ul li a:hover {
 
 .title {
   font-family: "Adieu", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   margin-top: -9%;
 }
 
@@ -131,27 +183,6 @@ nav ul li a:hover {
 
 .contact ul li a:hover {
   color: #de4c36; /* Changement de couleur au survol */
-}
-
-.see-all-projects {
-  text-align: left;
-}
-
-.btn-see-all {
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 16px;
-  color: #fff;
-  background: #2e8b57;
-  font-family: "IBM Plex Sans", sans-serif;
-  margin-bottom: 1%;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none; /* Désactive le soulignement */
-  margin-top: -1%;
-}
-
-.btn-see-all:hover {
-  background: #246a46;
 }
 
 footer {

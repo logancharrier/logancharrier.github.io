@@ -228,6 +228,20 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
+.project-item-bigger {
+  width: 50%;
+  background-color: #f6f0e6;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Images des projets */
+.project-item-bigger img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Catégorie du projet */
 .project-category {
   font-family: "Space Mono", sans-serif;

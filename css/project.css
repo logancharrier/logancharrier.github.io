@@ -194,8 +194,7 @@ hr {
 .description-content {
   font-family: Sora, system-ui, sans-serif;
   max-width: 1440px; /* Largeur maximale */
-  padding-left: 12.45vw; /* Alignement avec les projets */
-  margin-top: 25px;
+  margin-top: 1%;
   text-align: left; /* Alignement du texte à gauche */
   font-size: 17px; /* Taille du texte */
   font-weight: 300;
@@ -255,12 +254,14 @@ p {
   margin-top: 4%;
   display: inline-block;
   padding: 15px 30px;
-  font-size: 18px;
-  color: #fff;
+  font-size: 16px;
+
   background: #2e8b57;
   font-family: Sora, system-ui, sans-serif;
   margin-bottom: 2.5%;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #fff !important;
 }
 
 .btn-see-all:hover {
