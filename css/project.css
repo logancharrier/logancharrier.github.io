@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "Adieu";
+  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f0e6;
+  color: black;
+  text-align: center;
+}
+
+nav {
+  display: flex; /* Alignement en ligne */
+  align-items: center; /* Centrage vertical des éléments */
+  max-width: 1440px;
+  padding: 30px;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 auto; /* Centrage du nav sur la page */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Espacement entre les liens */
+  margin-left: auto; /* Pousse la liste à droite */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  font-style: italic;
+  transition: 0.05s ease-in-out;
+}
+
+.project-title {
+  font-family: Inter, sans-serif;
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: 40px; /* Taille du texte */
+  font-weight: bold;
+}
+
+.return-button {
+  color: #808080;
+  margin-top: 3%;
+  margin-bottom: 1.5%;
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  text-align: left; /* Alignement du texte à gauche */
+  font-family: "Space Mono", sans-serif;
+}
+
+.project a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Prend la couleur du parent */
+  transition: color 0.3s ease; /* Animation fluide */
+}
+.project a:hover {
+  opacity: 0.8; /* Effet léger au survol */
+}
+
+.project-banner {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex;
+  justify-content: center; /* Centre l'image */
+  margin-top: 1%;
+}
+
+.project-banner img {
+  width: 100%; /* L'image s'adapte à son conteneur */
+  max-width: 1440px; /* Limite la largeur maximale à 1440px */
+  height: auto; /* Conserve les proportions */
+}
+
+.banner-dirisi {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex;
+
+  margin-top: 1%;
+}
+
+.banner-dirisi img {
+  width: 35%; /* L'image s'adapte à son conteneur */
+  max-width: 1440px; /* Limite la largeur maximale à 1440px */
+  height: auto; /* Conserve les proportions */
+  margin-left: 12.5%;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center; /* Centre les tags */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.div-block {
+  display: flex;
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  gap: 20px; /* Espacement entre les tags */
+  max-width: 1440px; /* Limite la largeur */
+  width: 100%; /* Prend toute la largeur disponible */
+  justify-content: center; /* Centre les éléments */
+}
+
+.tag-item {
+  font-family: Sora, system-ui, sans-serif;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: left;
+  min-width: 150px; /* Largeur minimum */
+  flex: 1; /* Les éléments s'ajustent de manière flexible */
+  max-width: 300px; /* Pour éviter qu'ils ne deviennent trop larges */
+}
+
+.tag-category {
+  font-family: "Space Mono", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase !important;
+  color: #808080;
+}
+
+.tag-title {
+  margin-top: -5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 1440px;
+  margin: 30px auto;
+}
+
+.transition-to-description {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6%;
+}
+
+.transition-to-description a {
+  margin-top: 6%;
+  text-decoration: none;
+  color: black; /* Couleur du texte (vert) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-to-description a:hover {
+  text-decoration: underline;
+}
+
+.arrow-down {
+  font-size: 10px;
+}
+
+.transition-to-description i {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.block-title {
+  font-family: Inter, sans-serif;
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  margin-top: 50px;
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: 30px; /* Taille du texte */
+  font-weight: bold;
+}
+
+.description-content {
+  font-family: Sora, system-ui, sans-serif;
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  margin-top: 25px;
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: 17px; /* Taille du texte */
+  font-weight: 300;
+  line-height: 162%;
+}
+
+.screenshots-title {
+  font-family: Inter, sans-serif;
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  margin-top: 4%;
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: 30px; /* Taille du texte */
+  font-weight: bold;
+}
+
+.screenshots-content {
+  max-width: 1440px; /* Largeur maximale */
+  padding-left: 12.45vw; /* Alignement avec les projets */
+  margin-top: 25px;
+}
+/* Section projets */
+.projects {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 8vw;
+  text-align: center;
+}
+
+/* Conteneur des projets */
+.div-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style pour chaque projet */
+.project-item {
+  width: 35%;
+  background-color: #f6f0e6;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Images des projets */
+.project-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+p {
+  font-weight: 600;
+}
+
+.btn-see-all {
+  margin-top: 4%;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: #2e8b57;
+  font-family: Sora, system-ui, sans-serif;
+  margin-bottom: 2.5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-see-all:hover {
+  background: #246a46;
+}
+
+footer {
+  margin-top: 2%;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  position: static; /* Fixe le footer en bas */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Largeur complète */
+  background-color: black; /* Fond noir */
+  color: white; /* Texte blanc */
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-content {
+  max-width: 1440px; /* Largeur maximale */
+  margin: 0 auto; /* Centre le contenu */
+  display: flex;
+  justify-content: space-between; /* Aligne les éléments à gauche et à droite */
+  align-items: center; /* Centre verticalement */
+  padding: 0 20px; /* Espacement intérieur */
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right ul {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Espacement entre les liens */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #f6f0e6; /* Changement de couleur au survol */
+}

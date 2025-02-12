@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Adieu";
-  src: url("fonts/Adieu-Regular.ttf") format("truetype");
+  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -61,7 +61,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border: 1px solid #2e8b57;
+  border: 1px solid #004eff;
 }
 
 .presentation {
@@ -75,10 +75,10 @@ nav ul li a:hover {
   font-family: IBM Plex Mono, sans-serif;
   flex: 1; /* Le texte prend tout l'espace disponible à gauche */
   text-align: left;
-  font-size: 1.26em;
+  font-size: 1.2em;
   font-weight: 500;
   line-height: 1.3em;
-  padding: 7vh 4vw 5vh 2vw;
+  padding: 5.8vh 4vw 5vh 2vw;
 }
 
 .image-placeholder {
@@ -119,7 +119,7 @@ nav ul li a:hover {
 }
 
 .logo-reseau ul li a:hover {
-  color: #2e8b57; /* Changement de couleur au survol */
+  color: #004eff; /* Changement de couleur au survol */
 }
 
 #carre::before {
@@ -129,7 +129,7 @@ nav ul li a:hover {
   left: 10px; /* Décalage vers la droite */
   width: 100%;
   height: 100%;
-  background-color: #2e8b57; /* Ombre avec opacité */
+  background-color: #004eff; /* Ombre avec opacité */
 
   z-index: -1; /* Place l'ombre derrière */
 }
@@ -144,7 +144,7 @@ nav ul li a:hover {
 }
 
 .transition-to-projects a {
-  margin-top: 8%;
+  margin-top: 9%;
   text-decoration: none;
   color: black; /* Couleur du texte (vert) */
   display: flex;
@@ -165,12 +165,31 @@ nav ul li a:hover {
   margin-left: 10px;
 }
 
+.before-projects-text {
+  font-family: Inter, sans-serif;
+  max-width: 1440px; /* Largeur maximale */
+  margin: 0 auto -40px; /* Centrage + espacement en bas */
+  padding-left: 20.2vw; /* Alignement avec les projets */
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: 30px; /* Taille du texte */
+  font-weight: bold;
+}
+
 /* Section projets */
 .projects {
   max-width: 1440px;
   margin: 0 auto;
   padding: 50px 8vw;
   text-align: center;
+}
+
+.project-title a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Prend la couleur du parent */
+  transition: color 0.3s ease; /* Animation fluide */
+}
+.project-title a:hover {
+  opacity: 0.8; /* Effet léger au survol */
 }
 
 .projects-title {
@@ -182,7 +201,7 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-.projects-title i {
+.projects-title-first-year i {
   margin-left: 8px;
   color: #808080;
 }
