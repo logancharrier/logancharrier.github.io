@@ -182,6 +182,16 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
+.project-title a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Prend la couleur du parent */
+  transition: color 0.3s ease; /* Animation fluide */
+}
+
+.project-title a:hover {
+  opacity: 0.8; /* Effet léger au survol */
+}
+
 .projects-title i {
   margin-left: 8px;
   color: #808080;
