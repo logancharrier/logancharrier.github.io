@@ -10,6 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -52,7 +55,7 @@
 
       <div class="project-title">CGB - Application bancaire</div>
       <div class="banner-dirisi">
-        <img src="../assets/cgb-removebg-preview (1).png" />
+        <img src="../assets/cgb-removebg-preview (2).png" />
       </div>
       <div class="project-tags">
         <div class="div-block">
@@ -90,15 +93,40 @@
       </div>
       <hr />
       <div class="transition-to-description">
-        <a href="#projects"
+        <a href="#description"
           >VOIR LA PRÉSENTATION
           <div class="arrow-down"><i class="fa-solid fa-arrow-down"></i></div
         ></a>
       </div>
       <div class="project-block">
-        <div class="block-title">
+        <div class="block-title" id="description">
           Description
-          <div class="description-content">CGB : ...</div>
+          <div class="description-content">CGB ou Crédit Général Bank est le deuxième projet de l'année que nous avons eu à développer en AP. 
+            Cette fois-ci, l’objectif était de travailler sur une API REST bancaire qui permettait de gérer des virements simples et des virements par lots, 
+            à destination des entreprises clientes comme Galaxy Swiss Bourdin. Le but était d’améliorer les services existants et de garantir un fonctionnement fiable et sécurisé.
+            <br><br>Au début, on nous fourni une base de projet en Java avec Spring Boot, mais contrairement à GSB, nous avions beaucoup à réaliser nous-mêmes. 
+            Il a donc fallu reprendre pas mal de choses de zéro : configuration de l’environnement, mise en place de tests unitaires avec MockMVC, 
+            ajout de la documentation avec JavaDoc mais surtout ajouter de nouvelles fonctionnalités telles que la gestion des comptes bénéficiaires.
+            <br><br>
+            <strong>
+            Missions réalisées : <br>
+          </strong>
+          <strong>
+            • Mission 1 – Test et amélioration de l’API de virement simple :</strong> Mise en place de l’environnement, test des endpoints via Postman,
+             ajout de logs, documentation du code et des retours API. <br>
+             <strong>
+            • Mission 2 – Validation des IBAN : </strong>Implémentation d’un validateur d’IBAN conforme aux normes européennes avec gestion d’exceptions personnalisées
+             pour les formats incorrects. Création d’une classe singleton + tests unitaires. <br>
+             <strong>
+             • Mission 3 – Développement de l’API de virements par lots : </strong>Cette partie m’a demandé pas mal de réflexion, notamment sur l’architecture REST à mettre en place. 
+            J’ai développé un endpoint capable de recevoir plusieurs virements en une seule requête et de les exécuter de façon asynchrone. J’ai aussi géré les cas d’échec 
+            (transaction non aboutie) pour qu’elles soient enregistrées et éventuellement rejouées plus tard. <br>
+            <strong>• Mission 4 – Génération de rapports et notifications : </strong>Développement d’un système de rapports JSON consultables à la demande et envoi d’une notification de 
+            résumé par email à l’utilisateur. <br>
+            <strong>• Mission 5 – Sécurisation de l’API :</strong> Implémentation d’un système d’authentification sécurisé via OAuth2, avec gestion des droits d’accès et des comptes 
+            utilisateurs autorisés. <br>
+            <br>
+            Ce projet m’a beaucoup aidé à solidifier mes compétences en Spring Boot, API REST, sécurité et tests et plus globalement en Java.</div>
         </div>
       </div>
       <div class="block-title">
@@ -111,12 +139,7 @@
           <div class="project-item">
             <img src="../assets/CGB2.PNG" alt="CGB project" />
           </div>
-          <div class="project-item">
-            <img src="../assets/CGB3.PNG" alt="CGB project" />
-          </div>
-          <div class="project-item">
-            <img src="../assets/CGB4.PNG" alt="CGB project" />
-          </div>
+          
         </div>
       </div>
       <hr />
@@ -136,7 +159,7 @@
             </p>
           </div>
           <div class="project-banner">
-            <img src="../assets/tableausyntheseCGB.png" />
+            <img src="../assets/tableausynthesecgb.PNG" />
           </div>
         </div>
       </div>
@@ -191,6 +214,17 @@
 
     document.addEventListener("click", function () {
       burgerLinks.classList.remove("burger-show");
+    });
+  </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
     });
   </script>
 </body>

@@ -61,14 +61,14 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 #firstfeature {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .feature:nth-child(even) {
