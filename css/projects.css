@@ -4,6 +4,15 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  width: 90%;
+  max-width: 1440px;
+  margin: 30px auto;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
 @font-face {
   font-family: "Adieu";
   src: url("../fonts/Adieu-Regular.ttf") format("truetype");
