@@ -256,3 +256,141 @@ footer {
 #burger-links.burger-show {
   display: flex;
 }
+.menu-burger-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-burger {
+    display: none; /* version PC uniquement */
+  }
+
+  .menu-burger-mobile {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+  }
+
+  #mobile-burger {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    padding-right: 10px;
+  }
+
+  #mobile-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    z-index: 1000;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  #mobile-links.burger-show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  #mobile-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Adieu", sans-serif;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #carre {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .text {
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+  }
+
+  .contact {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .contact ul {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .btn-see-all {
+    display: block;
+    margin: 20px auto;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  footer {
+    position: static;
+    padding: 20px 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-right ul {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}

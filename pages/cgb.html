@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,17 +35,30 @@
     <header>
       <nav>
         <div class="logo"><a href="landing.html">Logan CHARRIER</a></div>
-        <ul>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="projects.html">Mes projets</a></li>
+        <ul class="desktop-menu">
+          <li><a href="../pages/about.html">À propos</a></li>
+          <li><a href="../pages/projects.html">Mes projets</a></li>
           <li class="menu-burger">
-            <button id="burger-toggle">Plus <i class="fa-solid fa-bars"></i></button>
+            <button id="burger-toggle">
+              Plus <i class="fa-solid fa-bars"></i>
+            </button>
             <div id="burger-links" class="burger-hidden">
-              <a href="veille.html">Veille</a>
-              <a href="certif.html">Certifications</a>
+              <a href="../pages/veille.html">Veille</a>
+              <a href="../pages/certif.html">Certifications</a>
             </div>
           </li>
         </ul>
+        <div class="menu-burger-mobile">
+          <button id="mobile-burger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="mobile-links" class="burger-hidden">
+            <a href="../pages/about.html">À propos</a>
+            <a href="../pages/projects.html">Mes projets</a>
+            <a href="../pages/veille.html">Veille</a>
+            <a href="../pages/certif.html">Certifications</a>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="project">
@@ -134,10 +147,10 @@
 
         <div class="div-block">
           <div class="project-item">
-            <img src="../assets/CGB1.PNG" alt="CGB project" />
+            <img src="../assets/cgb1.png" alt="CGB project" />
           </div>
           <div class="project-item">
-            <img src="../assets/CGB2.PNG" alt="CGB project" />
+            <img src="../assets/cgb2.png" alt="CGB project" />
           </div>
           
         </div>
@@ -217,16 +230,29 @@
     });
   </script>
 <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
         });
       });
-    });
-  </script>
+    </script>
+    <script>
+      const mobileToggle = document.getElementById("mobile-burger");
+      const mobileLinks = document.getElementById("mobile-links");
+
+      mobileToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        mobileLinks.classList.toggle("burger-show");
+      });
+
+      document.addEventListener("click", function () {
+        mobileLinks.classList.remove("burger-show");
+      });
+    </script>
 </body>
 </html>
 

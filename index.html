@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,7 @@
     <header>
       <nav>
         <div class="logo"><a href="pages/landing.html">Logan CHARRIER</a></div>
-        <ul>
+        <ul class="desktop-menu">
           <li><a href="pages/about.html">À propos</a></li>
           <li><a href="pages/projects.html">Mes projets</a></li>
           <li class="menu-burger">
@@ -43,6 +43,17 @@
             </div>
           </li>
         </ul>
+        <div class="menu-burger-mobile">
+          <button id="mobile-burger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="mobile-links" class="burger-hidden">
+            <a href="pages/about.html">À propos</a>
+            <a href="pages/projects.html">Mes projets</a>
+            <a href="pages/veille.html">Veille</a>
+            <a href="pages/certif.html">Certifications</a>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="hero">
@@ -203,6 +214,19 @@
             behavior: "smooth",
           });
         });
+      });
+    </script>
+    <script>
+      const mobileToggle = document.getElementById("mobile-burger");
+      const mobileLinks = document.getElementById("mobile-links");
+
+      mobileToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        mobileLinks.classList.toggle("burger-show");
+      });
+
+      document.addEventListener("click", function () {
+        mobileLinks.classList.remove("burger-show");
       });
     </script>
   </body>
