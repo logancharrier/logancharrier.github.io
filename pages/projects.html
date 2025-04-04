@@ -31,7 +31,13 @@
         <ul>
           <li><a href="about.html">À propos</a></li>
           <li><a href="projects.html">Mes projets</a></li>
-          <li><a href="veille.html">Veille</a></li>
+          <li class="menu-burger">
+            <button id="burger-toggle">Plus <i class="fa-solid fa-bars"></i></button>
+            <div id="burger-links" class="burger-hidden">
+              <a href="veille.html">Veille</a>
+              <a href="certif.html">Certifications</a>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -83,7 +89,7 @@
     <div class="before-projects-text">
       Découvrez mes projets de première année de BTS SIO
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
       <div class="div-block">
         <div class="project-item">
           <a href="nolark.html">
@@ -262,4 +268,29 @@
         });
     });
   </script>
+  <script>
+    const toggleBtn = document.getElementById("burger-toggle");
+    const burgerLinks = document.getElementById("burger-links");
+
+    toggleBtn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      burgerLinks.classList.toggle("burger-show");
+    });
+
+    document.addEventListener("click", function () {
+      burgerLinks.classList.remove("burger-show");
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
 </html>

@@ -31,7 +31,13 @@
         <ul>
           <li><a href="pages/about.html">À propos</a></li>
           <li><a href="pages/projects.html">Mes projets</a></li>
-          <li><a href="pages/veille.html">Veille</a></li>
+          <li class="menu-burger">
+            <button id="burger-toggle">Plus <i class="fa-solid fa-bars"></i></button>
+            <div id="burger-links" class="burger-hidden">
+              <a href="pages/veille.html">Veille</a>
+              <a href="pages/certif.html">Certifications</a>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -82,7 +88,7 @@
       ></a>
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects">
       <div class="div-block">
         <div class="project-item">
           <a href="pages/nolark.html">
@@ -171,63 +177,29 @@
         </div>
       </div>
     </footer>
-  </body>
+    <script>
+      const toggleBtn = document.getElementById("burger-toggle");
+      const burgerLinks = document.getElementById("burger-links");
 
-  <script>
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.scrollY; // Position actuelle du scroll
-      const docHeight = document.documentElement.scrollHeight; // Hauteur totale de la page
-      const winHeight = window.innerHeight; // Hauteur visible de l'écran
-      const scrollPercent = scrollTop / (docHeight - winHeight); // Pourcentage du scroll
+      toggleBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        burgerLinks.classList.toggle("burger-show");
+      });
 
-      // Couleur initiale en RGB (246, 240, 230 -> #f6f0e6)
-      const startColor = { r: 246, g: 240, b: 230 };
-      // Couleur finale en RGB (255, 255, 255 -> blanc)
-      const endColor = { r: 255, g: 255, b: 255 };
+      document.addEventListener("click", function () {
+        burgerLinks.classList.remove("burger-show");
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
-      // Interpolation des couleurs en fonction du scroll
-      const r = Math.floor(
-        startColor.r + (endColor.r - startColor.r) * scrollPercent
-      );
-      const g = Math.floor(
-        startColor.g + (endColor.g - startColor.g) * scrollPercent
-      );
-      const b = Math.floor(
-        startColor.b + (endColor.b - startColor.b) * scrollPercent
-      );
-
-      // Application de la nouvelle couleur en fond de page
-      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-      window.addEventListener("scroll", function () {
-        const scrollTop = window.scrollY; // Position actuelle du scroll
-        const docHeight = document.documentElement.scrollHeight; // Hauteur totale de la page
-        const winHeight = window.innerHeight; // Hauteur visible de l'écran
-        const scrollPercent = scrollTop / (docHeight - winHeight); // Pourcentage du scroll
-
-        // Couleur initiale en RGB (246, 240, 230 -> #f6f0e6)
-        const startColor = { r: 246, g: 240, b: 230 };
-        // Couleur finale en RGB (255, 255, 255 -> blanc)
-        const endColor = { r: 255, g: 255, b: 255 };
-
-        // Interpolation des couleurs en fonction du scroll
-        const r = Math.floor(
-          startColor.r + (endColor.r - startColor.r) * scrollPercent
-        );
-        const g = Math.floor(
-          startColor.g + (endColor.g - startColor.g) * scrollPercent
-        );
-        const b = Math.floor(
-          startColor.b + (endColor.b - startColor.b) * scrollPercent
-        );
-
-        // Application de la nouvelle couleur en fond de page
-        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-
-        // Sélection de tous les éléments avec la classe "project-item"
-        document.querySelectorAll(".project-item").forEach((item) => {
-          item.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
         });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>

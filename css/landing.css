@@ -309,3 +309,56 @@ footer {
 .footer-right ul li a:hover {
   color: #f6f0e6; /* Changement de couleur au survol */
 }
+
+.menu-burger {
+  position: relative;
+}
+
+#burger-toggle {
+  background: none;
+  border: none;
+  font-family: "Adieu", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  padding: 2px 0;
+}
+
+#burger-toggle i {
+  font-size: 14px;
+  position: relative;
+  top: 1px; /* Ajuste finement l'alignement vertical de l'icône */
+}
+
+#burger-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#burger-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-family: "Adieu", sans-serif;
+  text-align: left;
+}
+
+#burger-links a:hover {
+  background-color: #f1f1f1;
+}
+
+#burger-links.burger-show {
+  display: flex;
+}
