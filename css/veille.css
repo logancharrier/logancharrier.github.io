@@ -19,6 +19,11 @@ body {
   text-align: center;
 }
 
+strong {
+  font-weight: 600;
+  color: black;
+}
+
 nav {
   display: flex; /* Alignement en ligne */
   align-items: center; /* Centrage vertical des éléments */
